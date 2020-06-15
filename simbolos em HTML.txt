@@ -1,0 +1,43 @@
+<h1>Símbolos especiais</h1>
+        <p>
+            &lt; <!--sinal "menor que"-->
+            &gt; <!--sinal "maior que"-->
+            &le; <!--sinal "menor ou igual a"-->
+            &ge; <!--sinal "maior ou igual a"--> <br>
+
+            &pound; <!--libra-->
+            &yen; <!--yene-->
+            &euro; <!--euro--> <br>
+            
+            &copy; <!--copyright-->
+            &reg; <!--marca registrada-->
+            &trade; <!--trade mark--> <br>
+
+            &permil; 
+            &percnt; <!--percentual-->
+            &sum; <!--somatoria-->
+            &infin; <!--infinito-->
+            &times; <!--multiplicação-->
+            &plusmn; <!--mais ou menos-->
+            &oplus; <!--mais numa circunferência-->
+            &radic; <!--radiciação-->
+            &ne; <!--not equal--> <br>
+
+            &delta;
+            &Delta;
+            &lambda;
+            &Omega;
+            &phi; <br>
+
+            &leftarrow;
+            &rightarrow;
+            &uparrow;
+            &downarrow;
+            &harr;
+            &varr; <br>
+
+            &spades;
+            &clubs;
+            &hearts;
+            &diams;
+        </p>
