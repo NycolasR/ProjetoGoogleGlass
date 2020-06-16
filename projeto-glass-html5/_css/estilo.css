@@ -1,8 +1,41 @@
 @charset "UTF-8";
 
 body {
-    background-color: white;
+    background-color: #dddddd;
     color: rgba(0, 0, 0, 1);
+}
+
+div#interface {
+    width: 900px;
+    background-color: white;
+
+    /*EXPLICAÇÃO MARGENS
+        Existem 4 margens:
+            1ª cima;
+            2ª direita;
+            3ª baixa;
+            4ª esquerda
+        A configuração de margens é feita através do parâmetro "margin";
+
+        Seus valores em pixels são dispostos nesta exata ordem;
+
+        Parâmetro "auto": determina que a responsabilidade de lidar 
+        com a margem foi atribuída ao navegador.
+    */
+    margin: -20px auto 0px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+    /*EXPLICAÇÃO PADDING
+        Lida com os lados da mensma forma que o margin,
+        porém do lado interno do container;
+
+        Com isto, tem-se 10 pixels em volta de todo o
+        conteúdo do site;
+
+        Se o valor for igual para os 4 parâmetros,
+        pode-se informá-lo apenas uma vez;
+    */
+    padding: 10px;
 }
 
 p {
@@ -10,6 +43,16 @@ p {
     text-align: justify;
     /*tabulação de 50 px para parágrafos*/
     text-indent: 50px; 
+}
+
+header#cabecalho img#icone {
+    position: absolute;
+    left: 955px;
+    top: 40px; 
+}
+
+header#cabecalho {
+    
 }
 
 /* Formatação de imagens com legendas */
@@ -62,8 +105,10 @@ figure.foto-legenda:hover figcaption {
 /*Formatação do menu*/
 
 nav#menu {
-    /*deve ser exibido como um bloco para que o menu flutue;
-      blocos podem flutuar na tela*/
+    /*EXPLICAÇÃO DO BLOCO
+        deve ser exibido como um bloco para que o menu flutue;
+        blocos podem flutuar na tela
+        */
     display: block;
 }
 
@@ -85,7 +130,7 @@ nav#menu ul {
         Para que elementos atravessem esta margem, se vali além do 0 (valores negativos).
     */
     
-    left: 300px;
+    left: 500px;
     /*Quanto mais alto o valor, mais distante ele estará do lado esquerdo do navegador*/
 }
 
@@ -112,6 +157,7 @@ nav#menu h1 {
 nav#menu a {
     color: black;
     text-decoration: none; /*Removendo o sublinhado*/
+    transition: color 0.7s;
 }
 
 nav#menu a:hover {
