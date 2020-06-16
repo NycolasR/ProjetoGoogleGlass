@@ -1,5 +1,15 @@
 @charset "UTF-8";
 
+/*Usando uma fonte externa armazenada em disco*/
+@font-face {
+    font-family: 'FonteLogo';
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+/*Usando uma fonte do Google Fonts (não encontrada para CSS3)
+@import url('https://fonts.googleapis.com/css3?family=Titillium+Web&display=swap');
+*/
+
 body {
     background-color: #dddddd;
     color: rgba(0, 0, 0, 1);
@@ -55,11 +65,12 @@ header#cabecalho {
     /*largura da borda, cor e tipo*/
     border-bottom: 1px #606060 solid; 
     height: 150px;
+    /*(url(), no-repeat para que a imagem não se repita, 0px left, 80px top)*/
     background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;
 }
 
 header#cabecalho h1 {
-    font-family: Arial, sans-serif;
+    font-family: 'FonteLogo', sans-serif;
     font-size: 30pt;
     color: #606060;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
