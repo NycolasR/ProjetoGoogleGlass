@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+body {
+    background-color: white;
+    color: rgba(0, 0, 0, 1);
+}
+
+p {
+    /*para textos justificados*/
+    text-align: justify;
+    /*tabulação de 50 px para parágrafos*/
+    text-indent: 50px; 
+}
+
+/* Formatação de imagens com legendas */
+figure.foto-legenda {
+    position: relative;
+    /*
+        Colocando o objeto container (figure) no lugar relativo ao lugar
+        onde foi colocado no código HTML
+    */
+
+    border: 8px solid white;
+    /*
+        8px: largura da borda
+        solid: tipo da borda
+        white: cor da borda
+    */
+    box-shadow: 1px 1px 4px black;
+}
+
+figure.foto-legenda img {
+    /*Para que a imagem tenha um preenchimento total*/
+    width: 100%;
+    height: 100%;
+}
+
+figure.foto-legenda figcaption {
+    opacity: 0;
+    position: absolute;
+    /*
+        Colocando-o na posição absoluta ao seu parente (figure)
+    */
+
+    top: 0px; /*Quanto maior o valor, mais distante ele ficará do topo*/
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 10px; /*Para criar um espaço na legenda, distanciando dos eixos x e y*/
+
+    /*Para que a figcaption não transpasse a borda; isto criará um box dentro da borda*/
+    box-sizing: border-box;
+    transition: opacity 0.7s;
+}
+
+/*Formatação disparada quando houver um mouseover() na figcaption*/
+figure.foto-legenda:hover figcaption {
+    opacity: 1;
+}
+
+/*Formatação do menu*/
+
+nav#menu {
+    /*deve ser exibido como um bloco para que o menu flutue;
+      blocos podem flutuar na tela*/
+    display: block;
+}
+
+nav#menu ul {
+    list-style: none; /*remove os marcadores da lista*/
+    text-transform: uppercase; /*as li's ficam com seus textos em maiúsculo*/
+
+    position: absolute;
+    /*EXPLICAÇÃO: relative e absolute:
+        relative: pode ser posicionado em qualquer lugar dentro do container (parent)
+
+        absolute: pode ser posicionado em qualquer lugar da página (inclundo fora do container);
+                  com isto, fica melhor para configurar o top e o left.
+    */
+
+    top: -20px;
+    /*EXPLICAÇÃO VALOR NEGATIVO:
+        A posição 0px possui uma margem interna dentro do navegador;
+        Para que elementos atravessem esta margem, se vali além do 0 (valores negativos).
+    */
+    
+    left: 300px;
+    /*Quanto mais alto o valor, mais distante ele estará do lado esquerdo do navegador*/
+}
+
+nav#menu li {
+    display: inline-block; /*dita que todos os li's devem ser posicionados de forma horizontal*/
+    background-color: #dddddd;
+    padding: 10px; /*cria um espaçamento extra nos li's*/
+    margin: 2px; /*controla o espaço externo (entre os botões) ao dos li's*/
+    transition: background-color 0.7s;
+}
+
+nav#menu li:hover {
+    background-color: #606060;
+}
+
+nav#menu h1 {
+    display: none;
+    /*EXPLICAÇÃO - OCULTAMENTO
+        Oculta-se visualmente mas preserva o elemento
+        para fins de semântica e mecanismos de busca;
+    */
+}
+
+nav#menu a {
+    color: black;
+    text-decoration: none; /*Removendo o sublinhado*/
+}
+
+nav#menu a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/*Meus testes
+
+figure.foto-oculos {
+    position: relative;
+    box-shadow: 1px 1px 4px rgb(167, 11, 167);
+    border: 8px solid white;
+}
+
+figure.foto-oculos figcaption {
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: opacity 1s;
+}
+
+figure.foto-oculos:hover figcaption {
+    opacity: 1;
+}
+
+figure.foto-oculos img {
+    width: 100%;
+    height: 100%;
+}
+*/

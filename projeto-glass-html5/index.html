@@ -4,15 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Tudo sobre Google Glass</title>
-    <style>
-
-        p {
-            /*para textos justificados*/
-            text-align: justify;
-            /*tabulação de 50 px para parágrafos*/
-            text-indent: 50px; 
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+    <!--EXPLICAÇÃO DA TAG <link>
+        <link>:  para fazer a conexão entre o html e um outro arquivo
+        rel="stylesheet":  stylesheet significa "folhas de estilo" (css)
+        href="_css/estilo.css":  href significa "Hypertext Reference - Referência a Hipertexto"; especifica o arquivo de fora que está sendo usado.
+    -->
 </head>
 
 <body>
@@ -26,7 +23,33 @@
                 <h2>A revolução do Google está chegando</h2>
             </hgroup>
 
-            <img src="_imagens/glass-oculos-preto-peq.png"> Menu Principal - Home - Especificações - Fotos - Multimídia - Fale conosco
+            <!--<figure class="foto-oculos">-->
+                <img src="_imagens/glass-oculos-preto-peq.png">
+                <!--<figcaption>Este é o Google Glass</figcaption>-->
+            <!--</figure>-->
+            
+            <nav id="menu"> <!--Container nav que cria uma área de navegação-->
+                <h1>Menu Principal</h1>
+                <ul> <!--Ordered List = Lista Ordenada-->
+                    <!--List Item = Item de lista-->
+                    <li><a href="index.html">Home</a></li> 
+                    <li><a href="specs.html">Especificações</a></li>
+                    <li><a href="fotos.html">Fotos</a></li>
+                    <li><a href="multimidia.html">Multimídia</a></li>
+                    <li><a href="fale-conosco.html">Fale conosco</a></li>
+                </ul>
+                <!--TAGS PARA LISTAS
+                    PARA <ol>:
+                        type=""  pode ser 1 (ordenação numérica), a (ordenação alfabética), i(ordenação em algarismos romanos).
+                        
+                        start=""  só pode receber um valor numérico que indica por
+                        qual elemento a contagem deve começar.
+
+                    PARA <ul>:
+                        type="" pode ser "square", "circle" e "disc"
+                -->
+            </nav>
+
         </header>
 
         <hgroup>
@@ -44,9 +67,15 @@
         -->
 
         <h2>O que é</h2>
-        <p>O <span>Google Glass</span> é um acessório em forma de óculos que possibilita a interação dos usuários com diversos conteúdos em realidade aumentada. Também chamado de <i>Project Glass</i>, o eletrônico é capaz de tirar fotos a partir de comandos de voz, enviar mensagens instantâneas e realizar vídeo&shy;con&shy;ferên&shy;cias. Seu lançamento está previsto para 2014, e seu preço deve ser de US$ 1,5 mil. Atualmente o <em>Google Glass</em> encontra-se em fase de testes e já possui um vídeo totalmente gravado com o dispositivo. Além disso, a companhia de buscas registrou novas patentes anti-furto e de desbloqueio de tela para o acessório.</p> <!-- <p> para parágrafos-->
+        <p>O <span>Google Glass</span> é um acessório em forma de óculos que possibilita a interação dos usuários com diversos conteúdos em realidade aumentada. Também chamado de <a href="http://glass.google.com" target="_blank">Project Glass</a>, o eletrônico é capaz de tirar fotos a partir de comandos de voz, enviar mensagens instantâneas e realizar vídeo&shy;con&shy;ferên&shy;cias. Seu lançamento está previsto para 2014, e seu preço deve ser de US$ 1,5 mil. Atualmente o <em>Google Glass</em> encontra-se em fase de testes e já possui um vídeo totalmente gravado com o dispositivo. Além disso, a companhia de buscas registrou novas patentes anti-furto e de desbloqueio de tela para o acessório.</p> <!-- <p> para parágrafos-->
 
-        <figure>
+        <!--TAGS PARAL LINKS
+            <a>: âncora, base para criação de links
+
+            target="_blank" para que o link seja aberto em uma nova aba do navegador
+        -->
+
+        <figure class="foto-legenda">
             <img src="_imagens/glass-quadro-homem-mulher.jpg">
             <figcaption>
                 <h3>Google Glass</h3>
