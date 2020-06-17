@@ -197,6 +197,96 @@ nav#menu a:hover {
     text-decoration: underline;
 }
 
+/*Configurando os lados (section e aside) da página*/
+section#corpo {
+    display: block;
+
+    /*EXPLICAÇÃO DA LARGURA DAS ÁREAS
+        A largura de uma área precisa respeitar a largura da outra
+        e a largura de seu parente.
+    */
+    width: 520px;
+
+    /*Para que o elemento "flutue", ele precisa estar em display como bloco*/
+    float: left;
+
+    /*EXPLICAÇÃO Linha lateral da página
+        A linha pode ser posicionada no lado direito da section ou
+        do lado esquerdo do aside;
+    */
+    border-right: 1px solid #606060;
+    padding-right: 15px;
+}
+
+table#tabelaspec {
+    border: 1px solid #606060;
+    border-spacing: 0px; /*removendo o espaçamento entre as células*/
+
+    /*centralizando a tabela*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table#tabelaspec td {
+    border: 1px solid #606060;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+table#tabelaspec td.colunaEsquerda {
+    color: white;
+    background-color: #606060;
+    text-align: right;
+    vertical-align: top;
+    font-weight: bold;
+}
+
+table#tabelaspec td.colunaDireita {
+    background-color: #cecece;
+    text-align: left;
+}
+
+table#tabelaspec caption {
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bolder;
+}
+
+table#tabelaspec caption span {
+    display: block;
+    float: right;
+    color: black;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+
+aside#lateral {
+    display: block;
+    width: 350px;
+    float: right;
+}
+
+footer#rodape {
+    /*EXPLICAÇÃO clear: both;
+        isto é: "limpe a configuração dos dois lados";
+
+        isto fará com que o conteúdo do footer#rodape seja
+        exibido fora da divisão da interface.
+    */
+    clear: both;
+    border-top: 1px solid #606060;
+}
+
+footer#rodape p {
+    text-align: center;
+}
+
+footer#rodape a {
+    text-decoration: none;
+    color: black;
+}
+
 /*Meus testes
 
 figure.foto-oculos {
