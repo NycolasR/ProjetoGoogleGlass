@@ -23,7 +23,7 @@
                 <h2>A revolução do Google está chegando</h2>
             </hgroup>
 
-            <img id="icone" src="_imagens/glass-oculos-preto-peq.png">
+            <img id="icone" src="_imagens/glass-oculos-preto-peq.png" >
 
             <!--TESTS DO ÓCULOS
                 <figure class="foto-oculos">
@@ -35,11 +35,11 @@
                 <h1>Menu Principal</h1>
                 <ul> <!--Ordered List = Lista Ordenada-->
                     <!--List Item = Item de lista-->
-                    <li><a href="index.html">Home</a></li> 
-                    <li><a href="specs.html">Especificações</a></li>
-                    <li><a href="fotos.html">Fotos</a></li>
-                    <li><a href="multimidia.html">Multimídia</a></li>
-                    <li><a href="fale-conosco.html">Fale conosco</a></li>
+                    <li onmouseover="trocarIcone('_imagens/home.png')" onmouseout="restaurarIcone()"><a href="index.html" id="btnHome" >Home</a></li> 
+                    <li onmouseover="trocarIcone('_imagens/especificacoes.png')" onmouseout="restaurarIcone()"><a href="specs.html" id="btnSpec" >Especificações</a></li>
+                    <li onmouseover="trocarIcone('_imagens/fotos.png')" onmouseout="restaurarIcone()"><a href="fotos.html" id="btnFotos" >Fotos</a></li>
+                    <li onmouseover="trocarIcone('_imagens/multimidia.png')" onmouseout="restaurarIcone()"><a href="multimidia.html" id="btnMultimidia" >Multimídia</a></li>
+                    <li onmouseover="trocarIcone('_imagens/contato.png')" onmouseout="restaurarIcone()"><a href="fale-conosco.html" id="btnFaleConosco" >Fale conosco</a></li>
                 </ul>
                 <!--TAGS PARA LISTAS
                     PARA <ol>:
@@ -148,5 +148,6 @@
             </p>
         </footer>
     </div>
+    <script src="_javascript/funcoes.js"></script>
 </body>
 </html>

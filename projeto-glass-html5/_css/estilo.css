@@ -68,7 +68,8 @@ a:hover {
 header#cabecalho img#icone {
     position: absolute;
     left: 955px;
-    top: 70px; 
+    top: 70px;
+    transition: 0.7s;
 }
 
 header#cabecalho {
