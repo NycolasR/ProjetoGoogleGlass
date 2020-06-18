@@ -1,29 +1,61 @@
-Google Glass
-A revolução do Google está chegando
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Glass: Galeria de Fotos</title>
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+    <script src="_javascript/funcoes.js"></script>
+</head>
 
-[AQUI ENTRA UMA FOTO]
+<body>
+    <div id="interface">
+        <header id="cabecalho">
+            <hgroup>
+                <h1>Google Glass</h1>
+                <h2>A revolução do Google está chegando</h2>
+            </hgroup>    
 
-Menu Principal
-- Home
-- Especificações
-- Fotos
-- Multimídia
-- Fale conosco
+            <img id="icone" src="_imagens/fotos.png">
 
-Glass > Fotos
-Galeria de Imagens do Google Glass
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
+            <nav id="menu">
+            <h1>Menu Principal</h1>
+                <ul onmouseout="trocarIcone('_imagens/fotos.png')">
+                    <li onmouseover="trocarIcone('_imagens/home.png')"><a href="index.html">Home</a></li>
 
-Veja na nossa galeria de fotos várias belas imagens que mostram algumas das principais características do Google Glass, como recursos e propriedades que estão impressionando o mundo inteiro. Basta passar o mouse sobre uma das fotos para ver uma versão ampliada e com uma breve descrição.
+                    <li onmouseover="trocarIcone('_imagens/especificacoes.png')"><a href="specs.html">Especificações</a></li>
 
-- Agenda e lembretes
-- Sergey Brin usando o Glass
-- Leve e compacto
-- Sensação de uma tela de 50"
-- Vários tipos de lente
-- Informações importantes
+                    <li><a href="fotos.html">Fotos</a></li>
 
-Copyright 2013 - by Gustavo Guanabara
+                    <li onmouseover="trocarIcone('_imagens/multimidia.png')"><a href="multimidia.html">Multimídia</a></li>
 
-Facebook | Twitter
+                    <li onmouseover="trocarIcone('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+            </nav>
+        </header>
+
+        <header id="cabecalho-artigo">
+            <hgroup>
+                <h3>Glass > Fotos</h3>
+                <h1>Galeria de Imagens do Google Glass</h1>
+                <h2>por Gustavo Guanabara</h2>
+                <h3 class="dataAtualizacao">Atualizado em 01/Maio/2013</h3>
+            </hgroup>
+        </header>
+
+        <p>Veja na nossa galeria de fotos várias belas imagens que mostram algumas das principais características do Google Glass, como recursos e propriedades que estão impressionando o mundo inteiro. Basta passar o mouse sobre uma das fotos para ver uma versão ampliada e com uma breve descrição.</p>
+
+        - Agenda e lembretes
+        - Sergey Brin usando o Glass
+        - Leve e compacto
+        - Sensação de uma tela de 50"
+        - Vários tipos de lente
+        - Informações importantes
+        
+        <footer id="rodape">
+            <p>Copyright 2013 - by Gustavo Guanabara <br>
+                <a href="http://facebook.com/cursosemvideo" target="_blank">Facebook</a> | 
+                <a href="http://twitter.com/guanabara" target="_blank">Twitter</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

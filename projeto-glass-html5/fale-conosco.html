@@ -1,19 +1,48 @@
-Google Glass
-A revolução do Google está chegando
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Contato</title>
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+    <script src="_javascript/funcoes.js"></script>
+</head>
 
-[AQUI ENTRA UMA FOTO]
+<body>
+    <div id="interface">
+        <header id="cabecalho">
+            <hgroup>
+                <h1>Google Glass</h1>
+                <h2>A revolução do Google está chegando</h2>
+            </hgroup>
 
-Menu Principal
-- Home
-- Especificações
-- Fotos
-- Multimídia
-- Fale conosco
+            <img id="icone" src="_imagens/contato.png">
 
-Fale Conosco > Contato
-Formulário de Contato
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
+            <nav id="menu">
+                <h1>Menu Principal</h1>
+                <ul onmouseout="trocarIcone('_imagens/contato.png')">
+
+                    <li onmouseover="trocarIcone('_imagens/home.png')"><a href="index.html">Home</a></li>
+
+                    <li onmouseover="trocarIcone('_imagens/especificacoes.png')"><a href="specs.html">Especificações</a></li>
+
+                    <li onmouseover="trocarIcone('_imagens/fotos.png')"><a href="fotos.html">Fotos</a></li>
+
+                    <li onmouseover="trocarIcone('_imagens/multimidia.png')"><a href="multimidia.html">Multimídia</a></li>
+
+                    <li><a href="fale-conosco.html">Fale conosco</a></li>
+
+                </ul>
+            </nav>
+        </header>
+
+        <header id="cabecalho-artigo">
+            <hgroup>
+                <h3>Fale Conosco > Contato</h3>
+                <h1>Formulário de Contato</h1>
+                <h2>por Gustavo Guanabara</h2>
+                <h3 class="dataAtualizacao">Atualizado em 01/Maio/2013</h3>
+            </hgroup>
+        </header>
 
 Identificação do Usuário
     Nome:
@@ -41,7 +70,13 @@ Quero um Google Glass
     Preço Total: R$
 
 
-[BOTÃO ENVIAR]
+<input type="button" value="enviar">
 
-Copyright 2013 - by Gustavo Guanabara
-Facebook | Twitter
+        <footer id="rodape">
+            <p>Copyright 2013 - by Gustavo Guanabara<br>
+            <a href="http://facebook.com/cursosemvideo" target="_blank">Facebook</a> | 
+            <a href="http://twitter.com/guanabara" target="_blank">Twitter</a></p>
+        </footer>
+    </div>
+</body>
+</html>
