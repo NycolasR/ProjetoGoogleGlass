@@ -51,10 +51,44 @@
                 <p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
 
                 <section id="conteudo">
-                    <img src="_imagens/glass-esquema-marcado.jpg">
 
-                    <!--<iframe> usado para conectar um .html em outro
-                        scrolling="no" para remover as barras de rolagem-->
+                    <!--Para criar a interatividade das áreas vermelhas,
+                        usa-se um mapa com um nome e estabelece a conexão
+                        entre os dois pelo usemap="#meuMapa"
+                    -->
+                    <img src="_imagens/glass-esquema-marcado.jpg" usemap="#meuMapa">
+                    <map name="meuMapa">
+
+                        <!--EXPLICAÇÃO <area>
+                            coords="(x,y => canto superior esquerdo), (x,y => canto inferior direito)"
+
+                            href="google-glass.html#tela" abrirá o arquivo especificado exatamente na área
+                            relativa ao id especificado após o #
+
+                            target="janela" diz onde o arquivo será aberto, que é o iframe com id="janela"
+
+                            para áreas circulares, as coordenadas serão: x, y do ponto central da circulferência e
+                            tamanho em pixels do raio
+                        -->
+                        <area shape="rect" coords="179,202, 270,260" href="google-glass.html#tela" target="janela">
+
+                        <area shape="circle" coords="158,243, 11" href="google-glass.html#camera" target="janela">
+
+                        <area shape="circle" coords="76,52, 11" href="google-glass.html#gadgets" target="janela">
+
+                        <!--Percorre-se a área poligonal em sentido horário:
+                            (28, 143) canto superior esquerdo
+                            (83, 216) canto superior direito
+                            (84, 249) canto inferior direito
+                            (27, 169) canto inferior esquerdo
+                        -->
+                        <area shape="poly" coords="28,143, 83,216, 82,250 27,169 " href="google-glass.html#sensores" target="janela">
+                    </map>
+
+                    <!--EXPLICAÇÃO <iframe>
+                        <iframe> usado para conectar um .html em outro
+                        scrolling="no" para remover as barras de rolagem
+                    -->
                     <iframe src="google-glass.html" name="janela" id="frame-spec" scrolling="no"></iframe>
                 </section>
             </article>
