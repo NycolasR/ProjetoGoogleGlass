@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Google Glass: Multimídia</title>
     <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="_css/media.css">
     <script src="_javascript/funcoes.js"></script>
 </head>
 
@@ -41,10 +42,20 @@
                 <h3 class="dataAtualizacao">Atualizado em 01/Maio/2013</h3>
         </header>
 
-        <p>Áudio e Vídeo</p>
+        <div id="tv-radio">
+            <audio id="musica" controls="controls">
+                <source src="_media/2009-lovers-carvings-bibio.mp3" type="audio/mpeg">
 
-        [AQUI ENTRA UM VÍDEO]
-        [AQUI ENTRA UM ÁUDIO]
+                <!--Mensagem de erro-->
+                Desculpe, mas não foi possível carregar o áudio. 
+            </audio>
+            <video id="filme" controls poster="_imagens/video-mini03.jpg">
+                <source src="_media/getting-started.mp4" type="video/mp4">
+                
+                <!--Mensagem de erro-->
+                Desculpe, mas não foi possível carregar o vídeo. 
+            </video>
+        </div>
 
         <footer id="rodape">
             <p>Copyright 2013 - by Gustavo Guanabara<br>
