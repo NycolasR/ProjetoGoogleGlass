@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Formulário de Contato</title>
     <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="_css/form.css">
     <script src="_javascript/funcoes.js"></script>
 </head>
 
@@ -45,33 +46,136 @@
             </hgroup>
         </header>
 
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
+        <!--EXPLICAÇÃO method="" e action=""
+            method="GET": mais veloz e menos seguro; ele adiciona os dados na URL;
+            method="POST": menos veloz e mais seguro; ele envia os dados por pacotes dentro da solicitação feita ao site.
 
-Endereço do Usuário
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
+            action="": indica para onde os dados serão enviados.
+        -->
+        <form method="POST" id="fContato" action="mailto:nycolas.ramon@academico.ifpb.edu.br">
+            <fieldset id="usuario"> <!--fieldset significa conjunto de campos-->
+                <legend>Identificação do Usuário</legend>  <!--<legend> delimita o título do fieldset-->
 
-Mensagem do Usuário
-    Grau de Urgência:
-    Mensagem:
+                    <!--EXPLICAÇÃO <input>
+                        tags <input> precisam de um type="", name="" e um id=""
+                        recomenda-se evitar colocar o mesmo valor para name="" e id=""
 
-Quero um Google Glass
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
+                        size="(int)" dita quantos carateres serão visíveis na caixa de texto
+                        maxlenth="(int)" dita quantos caracteres a caixa de texto poderá receber no máximo
+                        placeholder="(string)" indica qual a imagem surgirá na caixa de texto quando estiver vazia
+                    -->
+                    <p>
+                        <label for="cNome">Nome:</label> 
+                        <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo">
+                    </p>
+                    <p>
+                        <label for="cSenha">Senha:</label>
+                        <input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 dígitos">
+                    </p>
+                    <p>
+                        <label for="cEmail">E-mail:</label>
+                        <input type="email" name="tEmail" id="cEmail" size="20" maxlength="40" placeholder="exemplo@exemplo.com">
+                    </p>
 
+                    <fieldset id="sexo">
+                        <legend>Sexo</legend>
 
-<input type="button" value="enviar">
+                        <!--EXPLICAÇÃO <imput type="radio"> e <label for="(string)">
+                            Os radio buttons que fazem parte do mesmo grupo, devem ter o mesmo nome;
+                            A string no for="" em cada label deve referenciar o id de seu relativo input;
+                        -->
+                            <input type="radio" name="tSexo" id="cMas" checked><label for="cMas">Masculino</label><br>
+                            <input type="radio" name="tSexo" id="cFem"><label for="cFem">Feminino</label>
+                    </fieldset>
+
+                    <p>
+                        <label for="cNasc">Data de Nascimento:</label>
+                        <input type="date" name="tNasc" id="cNasc">
+                    </p>
+            </fieldset>
+
+            <fieldset id="endereco">
+                <legend>Endereço do Usuário</legend>
+                    <p>
+                        <label for="cRua">Logradouro:</label>
+                        <input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua, Av, Trav, etc...">
+                    </p>
+                    <p>
+                        <label for="cNum">Número:</label>
+                        <input type="number" name="tNum" id="cNum" min="0" max="99999">
+                    </p>
+                    <p>
+                        <label for="cEstado">Estado:</label>
+                        <select name="tEstado" id="cEstado">
+                            <optgroup label="Região Nordeste">
+                                <option value="PB" selected>Paraíba</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="BH">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="PI">Piauí</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="SE">Sergipe</option>
+                            </optgroup>
+
+                            <optgroup label="Região Sul">
+                                <option value="PR">Paraná</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                            </optgroup>
+
+                            <optgroup label="Região Sudeste">
+                                <option value="MG">Minas Gerais</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="ES">Espírito Santo</option>
+                            </optgroup>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="cCidade">Cidade:</label>
+                        <!--list="(string)" indica a lista de cidades usada para autocomplemento-->
+                        <input type="text" name="tCidade" id="cCidade" size="20" maxlength="40" placeholder="Sua Cidade" list="cidades">
+                    </p>
+                    <datalist id="cidades">
+                        <option value="Patos"></option>
+                        <option value="Souza"></option>
+                        <option value="Campina Grande"></option>
+                        <option value="Monteiro"></option>
+                    </datalist>
+            </fieldset>
+
+            <fieldset id="mensagem">
+                <legend>Mensagem do Usuário</legend>
+                    <p>
+                        <label for="cUrg">Grau de Urgência:</label>
+                        Min<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2">Máx
+                    </p>
+                    <p>
+                        <label for="cMsg">Mensagem:</label>
+                        <textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"></textarea>
+                    </p>
+            </fieldset>
+
+            <fieldset id="pedido">
+                <legend>Quero um Google Glass</legend>
+                    <p>
+                        <label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label>
+                    </p>
+                    <p>
+                        <label for="cCor">Cor:</label>
+                    </p>
+                    <p>
+                        <label for="cQtd">Quantidade:</label>
+                    </p>
+                    <p>
+                        <label for="cTot">Preço Total: R$</label>
+                    </p>
+            </fieldset>
+
+            <input type="button" value="enviar">
+        </form>
 
         <footer id="rodape">
             <p>Copyright 2013 - by Gustavo Guanabara<br>
