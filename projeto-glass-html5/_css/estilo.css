@@ -16,6 +16,10 @@ body {
     color: rgba(0, 0, 0, 1);
 }
 
+
+
+
+/*CSS PARA A INTERFACES*/
 div#interface {
     width: 900px;
     background-color: white;
@@ -49,6 +53,9 @@ div#interface {
     padding: 10px;
 }
 
+
+
+/*CSS PARA TODOS OS PARÁGRAFOS*/
 p {
     /*para textos justificados*/
     text-align: justify;
@@ -56,6 +63,10 @@ p {
     text-indent: 50px; 
 }
 
+
+
+
+/*CSS PARA OS LINKS*/
 a {
     color: #606060;
     text-decoration: none;
@@ -65,6 +76,11 @@ a:hover {
     text-decoration: underline;
 }
 
+
+
+
+
+/*CSS PARA O CABEÇALHO DA PÁGINA*/
 header#cabecalho img#icone {
     position: absolute;
     left: 955px;
@@ -97,6 +113,11 @@ header#cabecalho h2 {
     margin-top: 0px;
     margin-left: 5px;
 }
+
+
+
+
+
 
 /* Formatação de imagens com legendas */
 figure.foto-legenda {
@@ -145,8 +166,12 @@ figure.foto-legenda:hover figcaption {
     opacity: 1;
 }
 
-/*Formatação do menu*/
 
+
+
+
+
+/*Formatação do menu*/
 nav#menu {
     /*EXPLICAÇÃO DO BLOCO
         deve ser exibido como um bloco para que o menu flutue;
@@ -208,6 +233,10 @@ nav#menu a:hover {
     text-decoration: underline;
 }
 
+
+
+
+
 /*Configurando os lados (section e aside) da página*/
 section#corpo {
     display: block;
@@ -237,6 +266,8 @@ article#noticia-principal h2 {
     margin: 10px 0px 10px 0px;
 }
 
+
+/*CSS PARA O CABEÇALHO DO ARTIGO*/
 header#cabecalho-artigo h1 {
     font-family: 'FonteLogo', sans-serif;
     font-size: 20pt;
@@ -259,6 +290,9 @@ header#cabecalho-artigo h3 {
     text-align: right;
 }
 
+
+
+/*CSS PARA A TABELA*/
 table#tabelaspec {
     border: 1px solid #606060;
     border-spacing: 0px; /*removendo o espaçamento entre as células*/
@@ -302,10 +336,18 @@ table#tabelaspec caption span {
     margin-top: 10px;
 }
 
+
+/*CSS PARA VIDEO DA SECTION*/
 article#noticia-principal video#video01 {
     width: 500px;
 }
 
+
+
+
+
+
+/*CSS PARA O ASIDE*/
 aside#lateral {
     display: block;
     width: 350px;
@@ -331,10 +373,14 @@ aside#lateral h2 {
     margin-bottom: 0px;
 }
 
+/*CSS PARA VIDEO DO ASIDE*/
 aside#lateral video#video02 {
     width: 350px;
 }
 
+
+
+/*CSS PARA RODAPÉ*/
 footer#rodape {
     /*EXPLICAÇÃO clear: both;
         isto é: "limpe a configuração dos dois lados";
