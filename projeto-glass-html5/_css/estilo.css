@@ -302,6 +302,10 @@ table#tabelaspec caption span {
     margin-top: 10px;
 }
 
+article#noticia-principal video#video01 {
+    width: 500px;
+}
+
 aside#lateral {
     display: block;
     width: 350px;
@@ -324,6 +328,11 @@ aside#lateral h2 {
     font-size: 13pt;
     color: white;
     padding: 5px;
+    margin-bottom: 0px;
+}
+
+aside#lateral video#video02 {
+    width: 350px;
 }
 
 footer#rodape {
