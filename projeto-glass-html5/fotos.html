@@ -10,39 +10,39 @@
 
 <body>
     <div id="interface">
+        <header id="cabecalho">
+            <hgroup>
+                <h1>Google Glass</h1>
+                <h2>A revolução do Google está chegando</h2>
+            </hgroup>    
+
+            <img id="icone" src="_imagens/fotos.png">
+
+            <nav id="menu">
+            <h1>Menu Principal</h1>
+                <ul onmouseout="trocarIcone('_imagens/fotos.png')">
+                    <li onmouseover="trocarIcone('_imagens/home.png')"><a href="index.html">Home</a></li>
+
+                    <li onmouseover="trocarIcone('_imagens/especificacoes.png')"><a href="specs.html">Especificações</a></li>
+
+                    <li><a href="fotos.html">Fotos</a></li>
+
+                    <li onmouseover="trocarIcone('_imagens/multimidia.png')"><a href="multimidia.html">Multimídia</a></li>
+
+                    <li onmouseover="trocarIcone('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+            </nav>
+        </header>
+
+        <header id="cabecalho-artigo">
+            <hgroup>
+                <h3>Glass > Fotos</h3>
+                <h1>Galeria de Imagens do Google Glass</h1>
+                <h2>por Gustavo Guanabara</h2>
+                <h3 class="dataAtualizacao">Atualizado em 01/Maio/2013</h3>
+            </hgroup>
+        </header>
+
         <article id="noticia-principal">
-            <header id="cabecalho">
-                <hgroup>
-                    <h1>Google Glass</h1>
-                    <h2>A revolução do Google está chegando</h2>
-                </hgroup>    
-
-                <img id="icone" src="_imagens/fotos.png">
-
-                <nav id="menu">
-                <h1>Menu Principal</h1>
-                    <ul onmouseout="trocarIcone('_imagens/fotos.png')">
-                        <li onmouseover="trocarIcone('_imagens/home.png')"><a href="index.html">Home</a></li>
-
-                        <li onmouseover="trocarIcone('_imagens/especificacoes.png')"><a href="specs.html">Especificações</a></li>
-
-                        <li><a href="fotos.html">Fotos</a></li>
-
-                        <li onmouseover="trocarIcone('_imagens/multimidia.png')"><a href="multimidia.html">Multimídia</a></li>
-
-                        <li onmouseover="trocarIcone('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
-                </nav>
-            </header>
-
-            <header id="cabecalho-artigo">
-                <hgroup>
-                    <h3>Glass > Fotos</h3>
-                    <h1>Galeria de Imagens do Google Glass</h1>
-                    <h2>por Gustavo Guanabara</h2>
-                    <h3 class="dataAtualizacao">Atualizado em 01/Maio/2013</h3>
-                </hgroup>
-            </header>
-
             <p>Veja na nossa galeria de fotos várias belas imagens que mostram algumas das principais características do Google Glass, como recursos e propriedades que estão impressionando o mundo inteiro. Basta passar o mouse sobre uma das fotos para ver uma versão ampliada e com uma breve descrição.</p>
 
             <ul id="album-fotos">
